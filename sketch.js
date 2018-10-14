@@ -4,6 +4,8 @@ function preload(){
 
 function setup() {
   // put setup code here
+  fill(255,0,0);
+  rect(300,300);
 }
 
 function draw() {
