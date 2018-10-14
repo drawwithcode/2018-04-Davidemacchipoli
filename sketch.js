@@ -71,6 +71,15 @@ function setup() {
 
   myFirstBall = new Ball(width/2 - 180, height/2, 90);
   myFirstBall.display();
+
+
+  strokeWeight(1);
+    textSize(26);
+fill(153, 235, 255);
+      text('Move your mouse and see the changes', width/2 - 240  , height/2 -210 );
+
+
+
 }
 
 function draw() {
