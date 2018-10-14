@@ -76,7 +76,7 @@ function setup() {
   strokeWeight(1);
     textSize(26);
 fill(153, 235, 255);
-      text('Move your mouse and see the changes', width/2 - 240  , height/2 -210 );
+      text('Move your mouse and see the changes', width/2 - 227  , height/2 -210 );
 
 
 
