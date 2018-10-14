@@ -1,5 +1,7 @@
 var myCuteBall;
 var myUglyBall;
+var myFirstBall;
+
 
 function Ball(_x, _y, _diameter, ) { //dichiaro l'oggetto e ne definisco le caratteristiche
   // Properties defined by constructor
@@ -12,9 +14,28 @@ function Ball(_x, _y, _diameter, ) { //dichiaro l'oggetto e ne definisco le cara
   this.color = '#00b8e6';
   this.speed = 2;
   // Methods = azioni che può fare l'oggetto.
+
+this.changecolor = function () {
+  if (mouseX < width/2 && mouseY <height/2) {
+    this.color = '#99ebff';
+  } else if (mouseX > width/2 && mouseY <height/2) {
+      this.color = '#4ddbff';
+  };
+
+  if (mouseX > width/2 && mouseY >height/2) {
+    this.color = '#00a3cc';
+  } else if (mouseX < width/2 && mouseY >height/2) {
+      this.color = '#003d4d';
+  };
+
+
+
+}
+
+
   this.move = function() {
-    this.x = width/2 + mouseX *0.1 + 150 ;
-    this.y = height/2 + mouseY*0.1;
+    this.x = width/2 + mouseX *0.05 + 150 ;
+    this.y = height/2 -15 + mouseY*0.05;
   }
 
   this.rimpicciolire = function() {
@@ -47,6 +68,9 @@ function setup() {
 
   myUglyBall = new Ball(width/2 + 180, height/2, 90);
   myUglyBall.display();
+
+  myFirstBall = new Ball(width/2 - 180, height/2, 90);
+  myFirstBall.display();
 }
 
 function draw() {
@@ -59,5 +83,7 @@ function draw() {
   myCuteBall.rimpicciolire();
   myUglyBall.move();
     myUglyBall.display();
+    myFirstBall.display();
+    myFirstBall.changecolor();
 
 }
